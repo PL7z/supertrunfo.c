@@ -9,6 +9,9 @@ int main(){ //Função principal
     float area1, area2;
     float pib1, pib2;
     int pontos_turs1, pontos_turs2;
+    float densidade_populacional1, densidade_populacional2;
+    float pib_per_capita1, pib_per_capita2;
+    
 
     printf("Faça duas cartas\n");
 
@@ -26,6 +29,9 @@ int main(){ //Função principal
 
     printf("Digite a área de sua Cidade (Em km²): \n"); //Solcita ao usuário a área de sua cidade escolhida
     scanf("%f", &area1); //Lê um número decimal
+
+    printf("Qual o PIB de sua cidade: \n");
+    scanf("%f", &pib1);
 
     printf("Quantos pontos turísticos possuí sua cidade: \n"); //Solicita ao usuário a quantidade de pontos turísticos de sua cidade
     scanf("%d", &pontos_turs1); //Lê um número inteiro
@@ -49,8 +55,19 @@ int main(){ //Função principal
     printf("Digite a área de sua Cidade (Em km²): \n");
     scanf("%f", &area2);
 
+    printf("Qual o PIB de sua cidade: \n");
+    scanf("%f", &pib2);
+
     printf("Quantos pontos turísticos possuí sua cidade: \n");
     scanf("%d", &pontos_turs2);
+
+    densidade_populacional1 = (float)(populacao1 / area1);
+
+    pib_per_capita1 = (float)(pib1 / populacao1);
+
+    densidade_populacional2 = (float)(populacao2 / area2);
+
+    pib_per_capita2 = (float)(pib2 / populacao2);
 
 
     //Exibe os dados cadastrados pelo usuário
@@ -59,8 +76,12 @@ int main(){ //Função principal
     printf("Código: %c%02d\n", estado1, codigo1); //%02 coloca zero à esquerda
     printf("Nome da Cidade: %s\n", cidade1);
     printf("População: %d\n", populacao1);
-    printf("Área (em km²): %.2f\n", area1); //%.2 limita as casas decimais a duas
+    printf("Área (em km²): %.2f km²\n", area1); //%.2 limita as casas decimais a duas
+    printf("PIB: %.2f bilhões de reais\n", pib1);
     printf("Número de Pontos Turísticos: %d\n", pontos_turs1);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade_populacional1);
+    printf("PIB per Capita: %.2f reais\n", pib_per_capita1);
+
 
     //Exibe os dados cadastrados pelo usuário
     printf("\nCarta 2: \n");
@@ -68,8 +89,11 @@ int main(){ //Função principal
     printf("Código: %c%02d\n", estado2, codigo2); //%02 coloca zero à esquerda
     printf("Nome da Cidade: %s\n", cidade2);
     printf("População: %d\n", populacao2);
-    printf("Área (em km²): %.2f\n", area2); //%.2 limita as casas decimais a duas
+    printf("Área (em km²): %.2f km²\n", area2); //%.2 limita as casas decimais a duas
+    printf("PIB: %.2f bilhões de reais\n", pib2);
     printf("Número de Pontos Turísticos: %d\n", pontos_turs2);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade_populacional2);
+    printf("PIB per Capita: %.2f reais\n", pib_per_capita2);
 
 
     return 0;
